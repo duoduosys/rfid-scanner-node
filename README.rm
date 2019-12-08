@@ -5,6 +5,9 @@
 MFRC-522
 树莓派（本设备为zero）及配套设备
 蜂鸣器（可选）
+连接情况请下载本地的rfid-blockchain-hackster_T68BZYU572.jfif
+或者运行下面链接：
+https://hackster.imgix.net/uploads/attachments/889458/rfid-blockchain-hackster_T68BZYU572.png?auto=compress%2Cformat&w=1280&h=960&fit=max
 
 软件环境：
 nodejs 8
