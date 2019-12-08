@@ -1,4 +1,5 @@
-原始版本是2018年香港eos马拉松黑客大赛上面的一个项目。原始版本是收费的，也就是不但需要eos资源，同时每一笔都需要额外收取eos作为费用。此外智能合约也不是开源的。
+原始版本是2018年香港eos马拉松黑客大赛上面的一个项目。原始版本是收费的，也就是不但需要eos资源，同时每一笔都需要额外收取eos作为费用。
+此外智能合约也不是开源的。
 我们这个版本是在自建的sensorschain（与eos完全兼容）上运行的，原则上是免费的。同时后期也将开源智能合约。
 
 需要的硬件设备：
@@ -7,8 +8,7 @@ MFRC-522
 蜂鸣器（可选）
 连接情况请下载本地的rfid-blockchain-hackster_T68BZYU572.jfif
 或者运行下面链接：
-https://hackster.imgix.net/uploads/attachments/889458/rfid-blockchain-hackster_T68BZYU572.png?auto=compress%2Cformat&w=1280&h=960&fit=max
-
+https://hackster.imgix.net/uploads/attachments/889458/rfid-blockchain-hackster_T68BZYU572.png?auto=compress
 软件环境：
 nodejs 8
 npm 6
