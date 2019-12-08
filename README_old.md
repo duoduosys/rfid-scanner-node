@@ -1,5 +1,4 @@
 ## RFID Scanner Device Software for Blockchain
-基于树莓派的rfid扫描设备（基于区块链的存储）
 
 This software package enables scanning and transmission of RFID tag data to the EOS blockchain.
 
