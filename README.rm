@@ -17,11 +17,9 @@ sudo npm install -g n
 sudo n 8
 
 Clone this repository onto your Pi:
-
 $ git clone https://github.com/duoduosys/rfid-scanner-node.git
 $ cd rfid-scanner-node
 Install project dependencies:
-
 $ npm install
 
 运行：
@@ -50,6 +48,8 @@ memo后面的uid为nfc的id号码。
 2.更加合理的智能合约并开源。
 
 特别说明：
-有关技术问题请向原作者询问。
-原始版本版权归原作者所有。
+1.有关技术问题请向原作者询问。
+2.原始版本版权归原作者所有。
+
+
 
