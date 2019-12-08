@@ -29,11 +29,27 @@ node  rfid_scanner_ssc_rpi.js
 在显示一大串信息后，开始不断现实no card
 用MFRC-522附赠的蓝色卡片刷卡，会显示卡片信息，并开始写入sensorschain当中。
 
-
-
-
 查看已经存储的信息：（临时）
 ./cleos -u http://119.3.221.135:18888 get actions sschaintest1 –pretty
 ./cleos -u http://119.3.221.135:18888 get table eosvrcommetn sschaintest1 commentss
 第一个命令是查询sschaintest1的历史存储信息，第二个是查询最后一个信息。
+
+简要说明：
+rpc 为sensorschain的接口ip
+sschaintest1为账户名，在正式使用时更换为自己的账户
+defaultPrivateKey为账户对应的密码，不可外泄。
+duoduonfc222为自定义内容，满足12位即可，并且只能包含a-z，1到5，这些字符。
+memo后面的uid为nfc的id号码。
+
+申请sensorschain的账户说明：
+发需求给59974015@qq.com即可，我会发送一个有资源的账户，并连同公钥和私钥一并发给你。
+或者自建一对公钥私钥，然后发公钥给我，我会发一个基于该公钥的账户给你。
+
+未完成的事宜：
+1.更加清晰的查询界面；
+2.更加合理的智能合约并开源。
+
+特别说明：
+有关技术问题请向原作者询问。
+原始版本版权归原作者所有。
 
