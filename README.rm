@@ -1,3 +1,33 @@
 原始版本是2018年香港eos马拉松黑客大赛上面的一个项目。原始版本是收费的，也就是不但需要eos资源，同时每一笔都需要额外收取eos作为费用。此外智能合约也不是开源的。
 我们这个版本是在自建的sensorschain（与eos完全兼容）上运行的，原则上是免费的。同时后期也将开源智能合约。
 
+需要的硬件设备：
+MFRC-522
+树莓派（本设备为zero）及配套设备
+蜂鸣器（可选）
+
+软件环境：
+nodejs 8
+npm 6
+
+setup：
+sudo apt install npm
+sudo apt i -g npm
+sudo npm install -g n
+sudo n 8
+
+Clone this repository onto your Pi:
+
+$ git clone https://github.com/duoduosys/rfid-scanner-node.git
+$ cd rfid-scanner-node
+Install project dependencies:
+
+$ npm install
+
+运行：
+node  rfid_scanner_ssc_rpi.js
+在显示一大串信息后，开始不断现实no card
+用MFRC-522附赠的蓝色卡片刷卡，会显示卡片信息，并开始写入sensorschain当中。
+
+
+
