@@ -31,3 +31,9 @@ node  rfid_scanner_ssc_rpi.js
 
 
 
+
+查看已经存储的信息：（临时）
+./cleos -u http://119.3.221.135:18888 get actions sschaintest1 –pretty
+./cleos -u http://119.3.221.135:18888 get table eosvrcommetn sschaintest1 commentss
+第一个命令是查询sschaintest1的历史存储信息，第二个是查询最后一个信息。
+
