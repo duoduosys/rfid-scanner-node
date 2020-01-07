@@ -31,9 +31,20 @@ node  rfid_scanner_ssc_rpi.js
 用MFRC-522附赠的蓝色卡片刷卡，会显示卡片信息，并开始写入sensorschain当中。
 
 查看已经存储的信息：（临时）
+
+方法1：如果你有ubuntu下的基于eosio的cleos，那么可以在其命令行下运行：
 ./cleos -u http://119.3.221.135:18888 get actions sschaintest1 –pretty
 ./cleos -u http://119.3.221.135:18888 get table eosvrcommetn sschaintest1 commentss
 第一个命令是查询sschaintest1的历史存储信息，第二个是查询最后一个信息。
+
+方法2：如果只有树莓派，则在树莓派下运行：
+curl --request POST \
+  --url http://119.3.221.135:18888/v1/history/get_actions \
+  --header 'content-type: application/json' \
+  --data '{"pos":"-1","offset":"-2","account_name":"sschaintest1"}' | python -m json.tool
+其中将sschaintest1替换为你的账户的名字。
+在输入的一大串字符当中，memo后面就是nfc的名称。
+
 
 简要说明：
 rpc 为sensorschain的接口ip
