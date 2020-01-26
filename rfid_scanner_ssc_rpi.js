@@ -19,7 +19,7 @@ const { TextEncoder, TextDecoder } = require('util');
 // scanned tag data to the "submit" method of the contract on eosiot11rfid.
 // The private key to allow this device to use the "scan" permission is
 // provided below.
-const defaultPrivateKey = "5K1R54q7Ly3kJ7NuiVs9nMHRunzS2pHEet3MUHrBSANfhPxRW5f";
+const defaultPrivateKey = "5KKhRwmQmVhkKWTYrZmzaobeiP2dYt3WyppN4WktgHK2UvsdWLe";
 const signatureProvider = new JsSignatureProvider([defaultPrivateKey]);
 
 //const rpc = new JsonRpc('http://jungle2.cryptolions.io:80', { fetch });
@@ -31,16 +31,18 @@ function report_scan(devid, uid, time) {
   (async () => {
     const result = await api.transact({
       actions : [{
-        account :  'eosvrcomment',
-        name : 'comment',
+        account :  'sschaintest1',
+        name : 'propose',
         authorization: [{
-          actor: 'sschaintest1',
+          actor: 'sschaintest2',
           permission : 'active',
         }],
         data: {
-          from: 'sschaintest1',
-          to: 'duoduonfc222',
-          memo: uid,
+          proposer: 'sschaintest2',
+          proposal_name: 'example1',
+          title: uid,
+          proposal_json: '',
+	  expires_at: '2020-01-30T17:03:20'
         },
      }]
    }, {
