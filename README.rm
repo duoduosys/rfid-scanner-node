@@ -25,8 +25,6 @@ $ cd rfid-scanner-node
 Install project dependencies:
 $ npm install
 
-将rfid_scanner_ssc_rpi.js里面的example1修改为其他内容（不然会上传失败）
-
 运行：
 node  rfid_scanner_ssc_rpi.js
 在显示一大串信息后，开始不断现实no card
@@ -35,25 +33,25 @@ node  rfid_scanner_ssc_rpi.js
 查看已经存储的信息：（临时）
 
 方法1：如果你有ubuntu下的基于eosio的cleos，那么可以在其命令行下运行：
-./cleos -u http://119.3.221.135:18888 get actions sschaintest1 –pretty
-./cleos -u http://119.3.221.135:18888 get table eosvrcommetn sschaintest1 commentss
-第一个命令是查询sschaintest1的历史存储信息，第二个是查询最后一个信息。
+./cleos -u http://119.3.221.135:18888 get actions sschaintest2 –pretty
+第一个命令是查询sschaintest1的历史存储信息。
 
-方法2：如果只有树莓派，则在树莓派下运行：
-curl --request POST \
-  --url http://119.3.221.135:18888/v1/history/get_actions \
-  --header 'content-type: application/json' \
-  --data '{"pos":"-1","offset":"-2","account_name":"sschaintest1"}' | python -m json.tool
-其中将sschaintest1替换为你的账户的名字。
-在输入的一大串字符当中，memo后面就是nfc的名称。
+方法2：在win10环境下运行修改版的eos钱包，在最开始的api选择界面里面选择自定义并输入：
+http://119.3.221.135:18888
+然后在tool的manage wallets倒入密钥并选择sschaintest2.
+导入成功后，点击软件左上角的钱包选项，进去后选择history，就能看到最近20个的存储信息了。
+软件地址：
+链接：https://pan.baidu.com/s/1Cum5b7H0C0uu3gpdDKphoA 
+提取码：1sh7 
+ps：该软件的具体使用说明请访问
+https://github.com/greymass/eos-voter
 
 ------------------
 简要说明：
 rpc 为sensorschain的接口ip
-sschaintest1为账户名，在正式使用时更换为自己的账户
+sschaintest2为账户名，在正式使用时更换为自己的账户
 defaultPrivateKey为账户对应的密码，不可外泄。
-duoduonfc222为自定义内容，满足12位即可，并且只能包含a-z，1到5，这些字符。
-memo后面的uid为nfc的id号码。
+uid为nfc的id号码。
 ------------------
 申请sensorschain的账户说明：
 发需求给59974015@qq.com即可，我会发送一个有资源的账户，并连同公钥和私钥一并发给你。
