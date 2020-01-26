@@ -25,6 +25,8 @@ $ cd rfid-scanner-node
 Install project dependencies:
 $ npm install
 
+将rfid_scanner_ssc_rpi.js里面的example1修改为其他内容（不然会上传失败）
+
 运行：
 node  rfid_scanner_ssc_rpi.js
 在显示一大串信息后，开始不断现实no card
@@ -71,6 +73,13 @@ memo后面的uid为nfc的id号码。
 3.sensorschain不进行任何形式的售卖，仅提供给朵朵社区成员及物联网开发者使用。
 少量的直接申请即可，量大的，可以用朵朵资产1：1的单向兑换。
 （资产位于bts，资产名称为DUODUO，谨防假冒）
+
+v1.0版：
+修改智能合约，修改查找看的方式。
+
+v0.1版：
+将原合约修改为自有合约。
+
 
 
 
