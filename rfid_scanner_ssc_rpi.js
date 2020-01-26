@@ -10,15 +10,10 @@ const fetch = require('node-fetch');
 const { TextEncoder, TextDecoder } = require('util');
 
 
-// Setup the RFID scanner's access to the EOS blockchain.
+// Setup the RFID scanner's access to the ssc blockchain.
 // A demonstration account is setup to allow RFID scanners to submit
 // their scanned tag UID to a blockchain smart contract.
-// This account is called "eosiot11node"
-// Furthermore, a special permission has been made availble publicly just
-// for this project.  The permission is called "scan" and it can only submit
-// scanned tag data to the "submit" method of the contract on eosiot11rfid.
-// The private key to allow this device to use the "scan" permission is
-// provided below.
+
 const defaultPrivateKey = "5KKhRwmQmVhkKWTYrZmzaobeiP2dYt3WyppN4WktgHK2UvsdWLe";
 const signatureProvider = new JsSignatureProvider([defaultPrivateKey]);
 
