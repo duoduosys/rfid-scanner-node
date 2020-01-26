@@ -32,17 +32,14 @@ function report_scan(devid, uid, time) {
     const result = await api.transact({
       actions : [{
         account :  'sschaintest1',
-        name : 'propose',
+        name : 'status',
         authorization: [{
           actor: 'sschaintest2',
           permission : 'active',
         }],
         data: {
-          proposer: 'sschaintest2',
-          proposal_name: 'example1',
-          title: uid,
-          proposal_json: '',
-	  expires_at: '2020-01-30T17:03:20'
+          account: 'sschaintest2',
+          content: uid,
         },
      }]
    }, {
